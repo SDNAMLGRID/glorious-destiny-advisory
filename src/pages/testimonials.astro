@@ -1,25 +1,48 @@
 ---
 import GlobalLayout from "../layouts/GlobalLayout.astro";
+
+const stories = [
+  {
+    quote: "I finally understand how to structure my finances.",
+    name: "Community member",
+  },
+  {
+    quote: "This changed how I think about money completely.",
+    name: "Community member",
+  },
+  {
+    quote: "I now have a clear path forward.",
+    name: "Community member",
+  },
+];
 ---
 
 <GlobalLayout title="Success Stories" description="Testimonials and transformations from Glorious Destiny Advisory.">
-  <section class="bg-ink text-ivory py-20 sm:py-24">
-    <div class="max-w-3xl mx-auto px-5 sm:px-8 text-center">
+  <section class="relative bg-ink text-ivory py-20 sm:py-24 overflow-hidden">
+    <div class="absolute inset-0 bg-grain opacity-15 pointer-events-none" aria-hidden="true"></div>
+    <div class="relative max-w-3xl mx-auto px-5 sm:px-8 text-center">
       <h1 class="font-display text-4xl sm:text-5xl font-semibold">Success Stories</h1>
       <p class="mt-6 text-ivory/75 font-sans text-lg">Real people. Real shifts in clarity and confidence.</p>
     </div>
   </section>
-  <section class="py-16 bg-ivory">
-    <div class="max-w-3xl mx-auto px-5 sm:px-8 space-y-10">
-      <p class="font-sans text-body/90 text-center">
-        Add full testimonials with first name + initial, photo (with permission), and context. Until then, the homepage
-        features soft proof quotes.
+
+  <section class="py-16 sm:py-24 bg-ivory">
+    <div class="max-w-5xl mx-auto px-5 sm:px-8 grid md:grid-cols-3 gap-8">
+      {stories.map((s) => (
+        <blockquote class="rounded-2xl border border-ink/10 bg-white p-8 shadow-card">
+          <p class="font-display text-lg text-ink/90 italic leading-relaxed">“{s.quote}”</p>
+          <footer class="mt-6 text-xs uppercase tracking-wider text-muted font-sans">{s.name}</footer>
+        </blockquote>
+      ))}
+    </div>
+    <div class="max-w-3xl mx-auto px-5 sm:px-8 mt-12 text-center font-sans text-muted text-sm leading-relaxed">
+      <p>
+        As you collect permissioned testimonials, add full names (or initials), photos, and context here. Avoid income
+        claims; focus on clarity, confidence, and process.
       </p>
-      <div class="text-center">
-        <a href="/book" class="inline-flex rounded-full bg-gold px-6 py-3 text-sm font-bold text-ink hover:brightness-110 transition-all">
-          Book your session
-        </a>
-      </div>
+      <a href="/book" class="mt-8 inline-flex rounded-full bg-gold-shine px-8 py-3.5 text-sm font-bold text-ink shadow-lift hover:brightness-110 transition-all">
+        Book your session
+      </a>
     </div>
   </section>
 </GlobalLayout>

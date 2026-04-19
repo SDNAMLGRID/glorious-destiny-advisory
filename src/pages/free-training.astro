@@ -6,35 +6,40 @@ import GlobalLayout from "../layouts/GlobalLayout.astro";
   title="Free Training"
   description="How to Build Wealth and Protect Your Income—free educational training with Glorious Destiny Advisory."
 >
-  <section class="bg-ink text-ivory py-20 sm:py-24">
-    <div class="max-w-3xl mx-auto px-5 sm:px-8 text-center">
-      <p class="text-gold text-xs font-bold uppercase tracking-widest font-sans">Funnel · Lead magnet</p>
+  <section class="relative bg-ink text-ivory py-20 sm:py-24 overflow-hidden">
+    <div class="absolute inset-0 bg-grain opacity-15 pointer-events-none" aria-hidden="true"></div>
+    <div class="absolute inset-0 bg-dark-radial opacity-60 pointer-events-none" aria-hidden="true"></div>
+    <div class="relative max-w-3xl mx-auto px-5 sm:px-8 text-center">
+      <p class="text-gold text-xs font-bold uppercase tracking-widest font-sans">Lead magnet</p>
       <h1 class="mt-4 font-display text-3xl sm:text-5xl font-semibold leading-tight">
         How to Build Wealth and Protect Your Income
       </h1>
       <p class="mt-6 text-ivory/75 font-sans text-lg leading-relaxed">Free training · Educational only</p>
     </div>
   </section>
+
   <section class="py-16 sm:py-24 bg-ivory">
     <div class="max-w-xl mx-auto px-5 sm:px-8">
       <p class="font-sans text-body/90 leading-relaxed text-center">
-        Register with your email to get access. Connect this form to your ESP (ConvertKit, Mailchimp, etc.) or a simple
-        serverless endpoint—see PLAN.md.
+        Register to receive the training link and follow-up resources. Wire this form to your email platform or API;
+        until then, submitting sends guests to a thank-you page for a smooth demo funnel.
       </p>
-      <form class="mt-10 space-y-4" action="#" method="post">
-        <label class="block">
-          <span class="sr-only">Email</span>
+      <form class="mt-10 space-y-4" method="get" action="/thank-you/">
+        <label class="block text-left text-sm font-semibold text-ink">
+          Email
           <input
             type="email"
             name="email"
             required
-            placeholder="Your email"
-            class="w-full rounded-xl border border-ink/15 bg-white px-4 py-3.5 font-sans text-ink placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-gold/40"
+            autocomplete="email"
+            class="mt-2 w-full rounded-xl border border-ink/15 bg-white px-4 py-3.5 font-sans text-ink placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-gold/40"
+            placeholder="you@example.com"
           />
         </label>
+        <input type="hidden" name="source" value="free-training" />
         <button
           type="submit"
-          class="w-full rounded-full bg-gold py-3.5 text-sm font-bold text-ink hover:brightness-110 transition-all shadow-lift"
+          class="w-full rounded-full bg-gold-shine py-3.5 text-sm font-bold text-ink shadow-lift hover:brightness-110 transition-all"
         >
           Register
         </button>

@@ -6,3 +6,6 @@ dist/
 !.env.example
 *.log
 .DS_Store
+
+# Source mockups (published copies live under public/images/gda/)
+glorious_destiny_mockups/

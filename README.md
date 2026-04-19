@@ -17,7 +17,7 @@ npm run build
 
 ## Config
 
-Edit `src/config.json` for contact info and scheduler URL.
+Edit `src/config.json` for contact info. Set `calendlyUrl` to your embed URL (for example `https://calendly.com/your-handle/discovery`) to show the scheduler on `/book`; leave empty for the email fallback.
 
 ## Plan
 

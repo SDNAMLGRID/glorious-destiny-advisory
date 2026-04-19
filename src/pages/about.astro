@@ -1,32 +1,81 @@
 ---
 import GlobalLayout from "../layouts/GlobalLayout.astro";
+import AdvisoryRule from "../components/AdvisoryRule.astro";
 import site from "../config.json";
 ---
 
-<GlobalLayout title="About" description={`Mission, vision, and story of ${site.principal}—${site.brand}.`}>
-  <section class="bg-ink text-ivory py-20 sm:py-24">
-    <div class="max-w-3xl mx-auto px-5 sm:px-8">
-      <h1 class="font-display text-4xl sm:text-5xl font-semibold">About {site.principal}</h1>
-      <p class="mt-6 text-ivory/75 font-sans text-lg leading-relaxed">
-        {site.brand} exists to move people from uncertainty to clarity—and from survival to legacy—through education,
-        mentorship, and purpose-aligned strategy.
+<GlobalLayout title="About" description={`Mission, story, and credentials of ${site.principal} — ${site.brand}.`}>
+  <section class="relative bg-ink text-ivory overflow-hidden">
+    <div class="absolute inset-0 bg-grain opacity-20 pointer-events-none" aria-hidden="true"></div>
+    <div class="absolute inset-0 bg-dark-radial opacity-60 pointer-events-none" aria-hidden="true"></div>
+    <div class="relative max-w-6xl mx-auto px-5 sm:px-8 py-20 sm:py-28 grid lg:grid-cols-2 gap-12 items-center">
+      <div class="order-2 lg:order-1 rounded-2xl overflow-hidden border border-gold/25 shadow-goldring">
+        <img
+          src="/images/gda/mockup_1.png"
+          alt={`${site.principal} — ${site.brand}`}
+          width="900"
+          height="1200"
+          class="w-full h-auto object-cover"
+          loading="eager"
+          decoding="async"
+        />
+      </div>
+      <div class="order-1 lg:order-2">
+        <AdvisoryRule label="Our story" class="justify-start mb-6" />
+        <h1 class="font-display text-4xl sm:text-5xl font-semibold leading-tight">About {site.principal}</h1>
+        <p class="mt-6 text-ivory/78 font-sans text-lg leading-relaxed">
+          {site.brand} exists to move people from uncertainty to clarity—and from survival to legacy—through education,
+          mentorship, and purpose-aligned strategy.
+        </p>
+        <p class="mt-6 text-sm text-ivory/55 font-sans border-l-2 border-gold/50 pl-4">
+          {site.affiliation}. Educational context only; not a solicitation where not permitted.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 sm:py-24 bg-ivory">
+    <div class="max-w-3xl mx-auto px-5 sm:px-8 space-y-8 font-sans text-lg text-body/90 leading-relaxed">
+      <h2 class="font-display text-2xl font-semibold text-ink">Mission &amp; vision</h2>
+      <p>
+        Replace this block with your origin story: the moment you knew financial literacy was a calling, how faith and
+        leadership shape your work, and what clients can expect in the first conversation.
+      </p>
+      <p>
+        Keep language <strong class="text-ink">hope-forward and precise</strong>—celebrate transformation without
+        promising investment outcomes. Let credentials (WFG, licensing) sit in plain view.
+      </p>
+      <div class="rounded-2xl border border-ink/10 bg-sand/50 p-8">
+        <h3 class="font-display text-xl font-semibold text-ink">Credentials snapshot</h3>
+        <ul class="mt-4 space-y-2 text-muted">
+          <li class="flex gap-2"><span class="text-gold">◆</span> Licensed financial professional, WFG</li>
+          <li class="flex gap-2"><span class="text-gold">◆</span> Education-first sessions and structured mentorship</li>
+          <li class="flex gap-2"><span class="text-gold">◆</span> Focus on protection, clarity, and long-term legacy</li>
+        </ul>
+      </div>
+      <p class="flex flex-wrap gap-4 pt-4">
+        <a href="/book" class="inline-flex rounded-full bg-gold-shine px-8 py-3.5 text-sm font-bold text-ink shadow-lift hover:brightness-110 transition-all">
+          Book a conversation
+        </a>
+        <a href="/programs" class="inline-flex rounded-full border border-ink/15 px-8 py-3.5 text-sm font-semibold text-ink hover:bg-sand transition-colors">
+          View programs
+        </a>
       </p>
     </div>
   </section>
-  <section class="py-16 sm:py-20 bg-ivory">
-    <div class="max-w-3xl mx-auto px-5 sm:px-8 space-y-8 font-sans text-lg text-body/90 leading-relaxed">
-      <p>
-        This page is ready for your full story: where you started, what shaped your calling, and why you chose to serve
-        through World Financial Group (WFG) as a licensed financial professional.
-      </p>
-      <p class="text-sm text-muted">
-        Educational only—not a substitute for personalized advice. See <a href="/legal" class="text-gold-deep font-semibold hover:underline">Legal &amp; disclosures</a>.
-      </p>
-      <p>
-        <a href="/book" class="inline-flex rounded-full bg-gold px-6 py-3 text-sm font-bold text-ink hover:brightness-110 transition-all">
-          Book a conversation
-        </a>
-      </p>
+
+  <section class="py-14 bg-charcoal border-t border-gold/15">
+    <div class="max-w-4xl mx-auto px-5 sm:px-8 text-center">
+      <p class="text-xs uppercase tracking-[0.2em] text-gold/80 font-sans mb-4">Brand system</p>
+      <img
+        src="/images/gda/mockup_2.png"
+        alt="Glorious Destiny Advisory logo variations"
+        width="1400"
+        height="800"
+        class="w-full rounded-xl border border-gold/20 shadow-lift"
+        loading="lazy"
+        decoding="async"
+      />
     </div>
   </section>
 </GlobalLayout>

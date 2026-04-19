@@ -1,5 +1,7 @@
 ---
 import GlobalLayout from "../layouts/GlobalLayout.astro";
+import AdvisoryRule from "../components/AdvisoryRule.astro";
+import GdaLogo from "../components/GdaLogo.astro";
 import site from "../config.json";
 
 const learnItems = [
@@ -15,41 +17,83 @@ const learnItems = [
   title={site.brand}
   description="Faith-driven financial education and mentorship—wealth, leadership, and legacy with Sista Grace Ajayi."
 >
-  <!-- 1. Hero -->
-  <section class="relative overflow-hidden bg-ink text-ivory">
+  <!-- 1. Hero — split layout aligned with mockup_4 (portrait + proposition) -->
+  <section class="relative min-h-[min(100dvh,900px)] flex flex-col lg:flex-row bg-ink text-ivory overflow-hidden">
+    <div class="relative w-full lg:w-[46%] min-h-[300px] sm:min-h-[380px] lg:min-h-0 lg:max-w-none shrink-0">
+      <img
+        src="/images/gda/mockup_4.png"
+        alt={`${site.principal}, licensed financial professional`}
+        width="1200"
+        height="900"
+        class="absolute inset-0 h-full w-full object-cover object-[18%_center] lg:object-[22%_center]"
+        loading="eager"
+        fetchpriority="high"
+        decoding="async"
+      />
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-ink/20 via-transparent to-ink lg:via-ink/30 lg:to-ink"
+        aria-hidden="true"
+      ></div>
+      <div class="absolute inset-0 bg-grain opacity-40 mix-blend-overlay pointer-events-none" aria-hidden="true"></div>
+    </div>
+
     <div
-      class="pointer-events-none absolute inset-0 opacity-90"
-      style="background: radial-gradient(ellipse 90% 70% at 70% 0%, rgba(196, 163, 82, 0.12) 0%, transparent 50%), linear-gradient(165deg, #0B0B0F 0%, #14141A 45%, #0B0B0F 100%);"
-      aria-hidden="true"
-    ></div>
-    <div class="relative max-w-6xl mx-auto px-5 sm:px-8 py-24 sm:py-32 lg:py-36">
-      <p class="text-gold font-sans text-xs sm:text-sm font-semibold uppercase tracking-[0.22em] mb-6">
-        {site.brand}
-      </p>
-      <h1 class="font-display text-[2.1rem] sm:text-5xl lg:text-[3.25rem] font-semibold leading-[1.08] tracking-tight max-w-4xl">
-        Helping You Build Wealth, Leadership, and Legacy
-      </h1>
-      <p class="mt-8 max-w-2xl text-lg sm:text-xl text-ivory/80 font-sans leading-relaxed">
-        Faith-driven financial education and mentorship designed to help individuals and families take control of their
-        future, grow with confidence, and build lasting generational wealth.
-      </p>
-      <div class="mt-10 flex flex-wrap gap-4">
-        <a
-          href="/free-training"
-          class="inline-flex items-center justify-center rounded-full bg-gold px-8 py-3.5 text-sm font-bold text-ink shadow-lift hover:brightness-110 transition-all"
-        >
-          Start Your Journey
-        </a>
-        <a
-          href="/book"
-          class="inline-flex items-center justify-center rounded-full border border-ivory/25 px-8 py-3.5 text-sm font-semibold text-ivory hover:bg-ivory/5 transition-colors"
-        >
-          Book a Free Consultation
-        </a>
+      class="relative flex flex-1 flex-col justify-center px-6 sm:px-10 lg:pl-10 lg:pr-14 xl:pr-20 py-16 lg:py-24 bg-ink bg-dark-radial bg-grain"
+    >
+      <div class="pointer-events-none absolute inset-0 opacity-[0.07]" aria-hidden="true" style="background-image: radial-gradient(circle at 20% 30%, rgba(255,220,160,0.9) 0%, transparent 35%), radial-gradient(circle at 80% 60%, rgba(201,165,74,0.5) 0%, transparent 40%);"></div>
+
+      <div class="relative max-w-xl">
+        <p class="font-script text-2xl sm:text-3xl md:text-4xl text-gold-bright/95 leading-none mb-1">{site.principal}</p>
+        <div class="flex items-center gap-3 mt-4 mb-2">
+          <GdaLogo class="h-12 w-12 sm:h-14 sm:w-14" />
+          <p class="font-brand text-[0.62rem] sm:text-xs uppercase tracking-[0.28em] text-gold/80 font-semibold leading-tight">
+            Glorious Destiny<br /><span class="text-ivory/90">Advisory</span>
+          </p>
+        </div>
+        <AdvisoryRule label="Wealth · Leadership · Legacy" class="justify-start mt-2 mb-8 max-w-md" />
+
+        <h1 class="font-display text-[2rem] sm:text-4xl lg:text-[2.75rem] font-semibold leading-[1.1] tracking-tight">
+          Helping You Build Wealth, Leadership, and Legacy
+        </h1>
+        <p class="mt-8 text-base sm:text-lg text-ivory/78 font-sans leading-relaxed">
+          Faith-driven financial education and mentorship designed to help individuals and families take control of their
+          future, grow with confidence, and build lasting generational wealth.
+        </p>
+        <div class="mt-10 flex flex-wrap gap-4">
+          <a
+            href="/free-training"
+            class="inline-flex items-center justify-center rounded-full bg-gold-shine px-8 py-3.5 text-sm font-bold text-ink shadow-lift hover:brightness-110 transition-all"
+          >
+            Start Your Journey
+          </a>
+          <a
+            href="/book"
+            class="inline-flex items-center justify-center rounded-full border border-gold/35 bg-ivory/5 px-8 py-3.5 text-sm font-semibold text-ivory hover:bg-ivory/10 transition-colors"
+          >
+            Book a Free Consultation
+          </a>
+        </div>
+        <p class="mt-12 text-xs sm:text-sm text-ivory/50 font-sans border-t border-gold/15 pt-8 max-w-lg leading-relaxed">
+          {site.affiliation}
+        </p>
       </div>
-      <p class="mt-12 text-sm text-ivory/55 font-sans border-t border-ivory/10 pt-8 max-w-xl">
-        {site.affiliation}
-      </p>
+    </div>
+  </section>
+
+  <!-- Brand strip — mockup_2 identity board -->
+  <section class="py-14 sm:py-16 bg-charcoal border-y border-gold/15" aria-label="Brand identity">
+    <div class="max-w-5xl mx-auto px-5 sm:px-8">
+      <div class="rounded-2xl overflow-hidden border border-gold/25 shadow-goldring bg-ink">
+        <img
+          src="/images/gda/mockup_2.png"
+          alt="Glorious Destiny Advisory logo and brand marks"
+          width="1600"
+          height="900"
+          class="w-full h-auto object-cover object-center"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
     </div>
   </section>
 
@@ -88,7 +132,7 @@ const learnItems = [
   </section>
 
   <!-- 3. The shift -->
-  <section class="py-20 sm:py-24 bg-sand/60 border-t border-ink/5" aria-labelledby="shift-heading">
+  <section class="py-20 sm:py-24 bg-sand/70 border-t border-ink/5" aria-labelledby="shift-heading">
     <div class="max-w-3xl mx-auto px-5 sm:px-8">
       <h2 id="shift-heading" class="font-display text-3xl sm:text-4xl font-semibold text-ink text-center leading-tight">
         There’s a Better Way Forward
@@ -126,15 +170,25 @@ const learnItems = [
     </div>
   </section>
 
-  <!-- 4. Authority -->
-  <section class="py-20 sm:py-24 bg-ink text-ivory" aria-labelledby="meet-heading">
-    <div class="max-w-6xl mx-auto px-5 sm:px-8 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-      <div class="order-2 lg:order-1 aspect-[4/5] max-w-md mx-auto lg:mx-0 rounded-2xl bg-charcoal border border-gold/20 shadow-lift overflow-hidden">
-        <div class="h-full w-full flex items-center justify-center p-10 text-center">
-          <p class="text-ivory/45 font-sans text-sm leading-relaxed">Portrait placeholder—replace with Sista Grace image in public/people/.</p>
+  <!-- 4. Authority — mockup_1 brand portrait -->
+  <section class="py-20 sm:py-24 bg-ink text-ivory relative overflow-hidden" aria-labelledby="meet-heading">
+    <div class="absolute inset-0 bg-grain opacity-[0.12] pointer-events-none" aria-hidden="true"></div>
+    <div class="relative max-w-6xl mx-auto px-5 sm:px-8 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div class="order-2 lg:order-1">
+        <div class="rounded-2xl overflow-hidden border border-gold/25 shadow-goldring bg-charcoal max-w-md mx-auto lg:mx-0">
+          <img
+            src="/images/gda/mockup_1.png"
+            alt={`${site.principal} — ${site.brand}`}
+            width="900"
+            height="1200"
+            class="w-full h-auto object-cover object-top"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
       </div>
       <div class="order-1 lg:order-2">
+        <AdvisoryRule label="Meet your guide" class="justify-start mb-6" />
         <h2 id="meet-heading" class="font-display text-3xl sm:text-4xl font-semibold text-ivory leading-tight">
           Meet {site.principal}
         </h2>
@@ -147,7 +201,7 @@ const learnItems = [
           To help people move from uncertainty to clarity—and from survival to legacy.
         </p>
         <p class="mt-10">
-          <a href="/about" class="inline-flex font-sans text-sm font-bold text-gold hover:text-ivory underline underline-offset-4 transition-colors">
+          <a href="/about" class="inline-flex font-sans text-sm font-bold text-gold hover:text-gold-bright underline underline-offset-4 transition-colors">
             Read her story →
           </a>
         </p>
@@ -163,7 +217,7 @@ const learnItems = [
       </h2>
       <ul class="mt-14 max-w-2xl mx-auto space-y-4 font-sans text-lg text-body/90">
         {learnItems.map((line) => (
-          <li class="flex gap-4 items-start rounded-xl border border-ink/8 bg-white/80 px-6 py-4 shadow-sm">
+          <li class="flex gap-4 items-start rounded-xl border border-ink/10 bg-white/90 px-6 py-4 shadow-card hover:shadow-lift hover:-translate-y-0.5 transition-all duration-300">
             <span class="text-gold mt-0.5 shrink-0" aria-hidden="true">◆</span>
             <span>{line}</span>
           </li>
@@ -173,13 +227,13 @@ const learnItems = [
   </section>
 
   <!-- 6. Programs -->
-  <section class="py-20 sm:py-24 bg-sand/40 border-t border-ink/5" aria-labelledby="programs-heading">
+  <section class="py-20 sm:py-24 bg-sand/50 border-t border-ink/5" aria-labelledby="programs-heading">
     <div class="max-w-6xl mx-auto px-5 sm:px-8">
       <h2 id="programs-heading" class="font-display text-3xl sm:text-4xl font-semibold text-ink text-center leading-tight">
         Start Where You Are
       </h2>
       <div class="mt-14 grid md:grid-cols-3 gap-8">
-        <article class="rounded-2xl border border-ink/8 bg-ivory p-8 shadow-sm hover:shadow-lift hover:-translate-y-0.5 transition-all duration-300 flex flex-col">
+        <article class="rounded-2xl border border-ink/10 bg-ivory p-8 shadow-card hover:shadow-lift hover:-translate-y-1 transition-all duration-300 flex flex-col border-gold-soft">
           <p class="text-gold text-xs font-bold uppercase tracking-widest font-sans">Entry</p>
           <h3 class="mt-3 font-display text-xl font-semibold text-ink">Free Financial Education Session</h3>
           <p class="mt-4 font-sans text-muted leading-relaxed flex-1">
@@ -189,7 +243,7 @@ const learnItems = [
             Book Free Session →
           </a>
         </article>
-        <article class="rounded-2xl border border-ink/8 bg-ivory p-8 shadow-sm hover:shadow-lift hover:-translate-y-0.5 transition-all duration-300 flex flex-col ring-1 ring-gold/20">
+        <article class="rounded-2xl border border-gold/35 bg-ivory p-8 shadow-goldring hover:-translate-y-1 transition-all duration-300 flex flex-col">
           <p class="text-gold text-xs font-bold uppercase tracking-widest font-sans">Growth</p>
           <h3 class="mt-3 font-display text-xl font-semibold text-ink">Wealth &amp; Leadership Mentorship</h3>
           <p class="mt-4 font-sans text-muted leading-relaxed flex-1">
@@ -199,7 +253,7 @@ const learnItems = [
             Apply Now →
           </a>
         </article>
-        <article class="rounded-2xl border border-ink/8 bg-ivory p-8 shadow-sm hover:shadow-lift hover:-translate-y-0.5 transition-all duration-300 flex flex-col">
+        <article class="rounded-2xl border border-ink/10 bg-ivory p-8 shadow-card hover:shadow-lift hover:-translate-y-1 transition-all duration-300 flex flex-col border-gold-soft">
           <p class="text-gold text-xs font-bold uppercase tracking-widest font-sans">Personal</p>
           <h3 class="mt-3 font-display text-xl font-semibold text-ink">One-on-One Advisory</h3>
           <p class="mt-4 font-sans text-muted leading-relaxed flex-1">
@@ -233,7 +287,7 @@ const learnItems = [
           "This changed how I think about money completely.",
           "I now have a clear path forward.",
         ].map((quote) => (
-          <blockquote class="rounded-2xl border border-ink/8 bg-white p-8 shadow-sm">
+          <blockquote class="rounded-2xl border border-ink/10 bg-white p-8 shadow-card">
             <p class="font-display text-lg text-ink/90 italic leading-relaxed">“{quote}”</p>
             <footer class="mt-6 text-xs uppercase tracking-wider text-muted font-sans">Community member</footer>
           </blockquote>
@@ -247,9 +301,24 @@ const learnItems = [
     </div>
   </section>
 
+  <!-- Secondary visual — mockup_3 (dark premium banner) -->
+  <section class="py-0 bg-ink" aria-hidden="true">
+    <img
+      src="/images/gda/mockup_3.png"
+      alt=""
+      role="presentation"
+      width="1600"
+      height="700"
+      class="w-full h-auto max-h-[420px] sm:max-h-[520px] object-cover object-center opacity-95"
+      loading="lazy"
+      decoding="async"
+    />
+  </section>
+
   <!-- 8. Final CTA -->
-  <section class="relative py-20 sm:py-28 bg-ink text-ivory overflow-hidden" aria-labelledby="close-heading">
-    <div class="pointer-events-none absolute inset-0 opacity-30" style="background: radial-gradient(circle at 30% 20%, rgba(196,163,82,0.2), transparent 45%);" aria-hidden="true"></div>
+  <section class="relative py-20 sm:py-28 bg-ink text-ivory overflow-hidden border-t border-gold/15" aria-labelledby="close-heading">
+    <div class="pointer-events-none absolute inset-0 bg-grain opacity-20" aria-hidden="true"></div>
+    <div class="pointer-events-none absolute inset-0 bg-dark-radial opacity-80" aria-hidden="true"></div>
     <div class="relative max-w-3xl mx-auto px-5 sm:px-8 text-center">
       <h2 id="close-heading" class="font-display text-3xl sm:text-4xl font-semibold leading-tight">
         Your Future Won’t Change… Until You Do
@@ -261,13 +330,13 @@ const learnItems = [
       <div class="mt-12 flex flex-wrap justify-center gap-4">
         <a
           href="/free-training"
-          class="inline-flex items-center justify-center rounded-full bg-gold px-8 py-3.5 text-sm font-bold text-ink shadow-lift hover:brightness-110 transition-all"
+          class="inline-flex items-center justify-center rounded-full bg-gold-shine px-8 py-3.5 text-sm font-bold text-ink shadow-lift hover:brightness-110 transition-all"
         >
           Start Your Journey Today
         </a>
         <a
           href="/book"
-          class="inline-flex items-center justify-center rounded-full border border-ivory/25 px-8 py-3.5 text-sm font-semibold text-ivory hover:bg-ivory/5 transition-colors"
+          class="inline-flex items-center justify-center rounded-full border border-gold/35 px-8 py-3.5 text-sm font-semibold text-ivory hover:bg-ivory/5 transition-colors"
         >
           Book Your Free Consultation
         </a>
