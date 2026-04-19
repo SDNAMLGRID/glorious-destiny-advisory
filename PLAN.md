@@ -1,6 +1,6 @@
 # Glorious Destiny Advisory (GDA) — Site Build Plan
 
-**Brand:** Glorious Destiny Advisory · **Authority:** Sista Grace Ajayi · **Affiliation:** WFG (compliance-first)  
+**Brand:** Glorious Destiny Advisory · **Authority:** Dr Gloria Ajayi · **Affiliation:** WFG (compliance-first)  
 **Model:** Same narrative arc as Infinite Wealth Academy — *emotional → story → education → authority → CTA*  
 **Stack (scaffolded):** Astro 5 + Tailwind 3, static output, ready for Vercel/Netlify/GitHub Pages.
 

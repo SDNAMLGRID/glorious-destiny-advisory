@@ -1,6 +1,6 @@
 # Glorious Destiny Advisory
 
-Faith-driven financial education and mentorship—**wealth, leadership, legacy**—with **Sista Grace Ajayi** (WFG licensed professional).
+Faith-driven financial education and mentorship—**wealth, leadership, legacy**—with **Dr Gloria Ajayi** (WFG licensed professional).
 
 ## Stack
 
