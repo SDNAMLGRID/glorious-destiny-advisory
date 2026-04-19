@@ -1,0 +1,42 @@
+---
+import GlobalLayout from "../layouts/GlobalLayout.astro";
+import site from "../config.json";
+---
+
+<GlobalLayout title="Contact" description="Contact Glorious Destiny Advisory—questions, media, and partnership.">
+  <section class="bg-ink text-ivory py-20 sm:py-24">
+    <div class="max-w-3xl mx-auto px-5 sm:px-8">
+      <h1 class="font-display text-4xl sm:text-5xl font-semibold">Contact</h1>
+      <p class="mt-6 text-ivory/75 font-sans text-lg">We’ll respond as soon as we can. For scheduling, use Book.</p>
+    </div>
+  </section>
+  <section class="py-16 bg-ivory">
+    <div class="max-w-xl mx-auto px-5 sm:px-8">
+      <dl class="font-sans space-y-2 text-body">
+        <dt class="text-xs uppercase tracking-wider text-muted">Email</dt>
+        <dd>
+          <a href={`mailto:${site.email}`} class="text-gold-deep font-semibold hover:underline">{site.email}</a>
+        </dd>
+        {site.phone ? (
+          <>
+            <dt class="text-xs uppercase tracking-wider text-muted pt-4">Phone</dt>
+            <dd>
+              <a href={`tel:${String(site.phone).replace(/\D/g, "")}`} class="hover:underline">
+                {site.phone}
+              </a>
+            </dd>
+          </>
+        ) : null}
+      </dl>
+      <form class="mt-12 space-y-4" action="#" method="post">
+        <input type="text" name="name" placeholder="Name" class="w-full rounded-xl border border-ink/15 px-4 py-3 font-sans" />
+        <input type="email" name="email" placeholder="Email" required class="w-full rounded-xl border border-ink/15 px-4 py-3 font-sans" />
+        <textarea name="message" rows={5} placeholder="Message" class="w-full rounded-xl border border-ink/15 px-4 py-3 font-sans"></textarea>
+        <button type="submit" class="w-full rounded-full bg-gold py-3 font-bold text-ink hover:brightness-110 transition-all">
+          Send message
+        </button>
+      </form>
+      <p class="mt-6 text-xs text-muted font-sans">Wire this form to Formspree, Basin, or your API (see PLAN.md).</p>
+    </div>
+  </section>
+</GlobalLayout>

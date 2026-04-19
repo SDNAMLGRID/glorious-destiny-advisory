@@ -1,0 +1,46 @@
+---
+import GlobalLayout from "../layouts/GlobalLayout.astro";
+import site from "../config.json";
+---
+
+<GlobalLayout title="Legal & Disclosures" description="Compliance, WFG affiliation, and educational disclaimers for Glorious Destiny Advisory.">
+  <section class="bg-ink text-ivory py-20 sm:py-24">
+    <div class="max-w-3xl mx-auto px-5 sm:px-8">
+      <h1 class="font-display text-4xl sm:text-5xl font-semibold">Legal &amp; Disclosures</h1>
+      <p class="mt-6 text-ivory/70 font-sans">Protecting you—and the integrity of this work.</p>
+    </div>
+  </section>
+  <section class="py-16 bg-ivory">
+    <div class="max-w-3xl mx-auto px-5 sm:px-8 space-y-8 font-sans text-body/90 leading-relaxed">
+      <div>
+        <h2 class="font-display text-xl font-semibold text-ink">Independent entity</h2>
+        <p class="mt-3">
+          {site.brand} is an independent entity. {site.principal} is a licensed financial professional with World Financial
+          Group (WFG).
+        </p>
+      </div>
+      <div>
+        <h2 class="font-display text-xl font-semibold text-ink">Educational use</h2>
+        <p class="mt-3">
+          This website is for educational purposes only and does not constitute financial, legal, or tax advice. Past
+          discussions or examples are not guarantees of future results.
+        </p>
+      </div>
+      <div>
+        <h2 class="font-display text-xl font-semibold text-ink">Your situation</h2>
+        <p class="mt-3">Results may vary. Consult a licensed professional for recommendations specific to your situation.</p>
+      </div>
+      <div>
+        <h2 class="font-display text-xl font-semibold text-ink">WFG disclosure</h2>
+        <p class="mt-3 text-sm text-muted">
+          Add any additional WFG-required disclosure language supplied by your upline or compliance team here (state
+          registrations, company legal name, etc.).
+        </p>
+      </div>
+      <ul class="text-sm font-semibold text-gold-deep space-y-2">
+        <li><a href="/privacy" class="hover:underline">Privacy Policy →</a></li>
+        <li><a href="/terms" class="hover:underline">Terms of Use →</a></li>
+      </ul>
+    </div>
+  </section>
+</GlobalLayout>

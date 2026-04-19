@@ -1,0 +1,36 @@
+---
+import GlobalLayout from "../layouts/GlobalLayout.astro";
+import site from "../config.json";
+---
+
+<GlobalLayout title="Book a Consultation" description="Schedule time with Glorious Destiny Advisory—free consultation and next steps.">
+  <section class="bg-ink text-ivory py-20 sm:py-24">
+    <div class="max-w-3xl mx-auto px-5 sm:px-8 text-center">
+      <h1 class="font-display text-4xl sm:text-5xl font-semibold">Book a Consultation</h1>
+      <p class="mt-6 text-ivory/75 font-sans text-lg leading-relaxed">
+        Choose a time that works for you. You’ll get a calm, educational conversation—no hard sell.
+      </p>
+    </div>
+  </section>
+  <section class="py-16 bg-ivory">
+    <div class="max-w-3xl mx-auto px-5 sm:px-8">
+      <div class="rounded-2xl border border-ink/10 bg-sand/50 p-10 text-center min-h-[320px] flex flex-col items-center justify-center">
+        <p class="font-sans text-muted leading-relaxed max-w-md">
+          Embed Calendly or your preferred scheduler here (configure URL in site config when ready).
+        </p>
+        <a
+          href={site.email ? `mailto:${site.email}?subject=Consultation%20request` : "/contact"}
+          class="mt-8 inline-flex rounded-full bg-gold px-6 py-3 text-sm font-bold text-ink hover:brightness-110 transition-all"
+        >
+          Email to schedule instead
+        </a>
+      </div>
+      <h2 class="mt-14 font-display text-xl font-semibold text-ink">What to expect</h2>
+      <ul class="mt-4 space-y-3 font-sans text-body/90">
+        <li class="flex gap-3"><span class="text-gold">◆</span> A few questions about your goals and priorities</li>
+        <li class="flex gap-3"><span class="text-gold">◆</span> High-level education—no product dump</li>
+        <li class="flex gap-3"><span class="text-gold">◆</span> Clear next steps, only if they’re a fit</li>
+      </ul>
+    </div>
+  </section>
+</GlobalLayout>

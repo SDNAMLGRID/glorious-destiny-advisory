@@ -1,0 +1,40 @@
+---
+import GlobalLayout from "../layouts/GlobalLayout.astro";
+---
+
+<GlobalLayout title="Apply for Mentorship" description="Apply for Wealth & Leadership Mentorship with Glorious Destiny Advisory.">
+  <section class="bg-ink text-ivory py-20 sm:py-24">
+    <div class="max-w-3xl mx-auto px-5 sm:px-8 text-center">
+      <h1 class="font-display text-4xl sm:text-5xl font-semibold">Mentorship Application</h1>
+      <p class="mt-6 text-ivory/75 font-sans text-lg leading-relaxed">
+        A short form helps us honor your time—and ensure this program is the right season for you.
+      </p>
+    </div>
+  </section>
+  <section class="py-16 bg-ivory">
+    <div class="max-w-xl mx-auto px-5 sm:px-8">
+      <form class="space-y-5" action="#" method="post">
+        <div>
+          <label class="block text-sm font-semibold text-ink mb-1">Name</label>
+          <input type="text" name="name" required class="w-full rounded-xl border border-ink/15 px-4 py-3 font-sans" />
+        </div>
+        <div>
+          <label class="block text-sm font-semibold text-ink mb-1">Email</label>
+          <input type="email" name="email" required class="w-full rounded-xl border border-ink/15 px-4 py-3 font-sans" />
+        </div>
+        <div>
+          <label class="block text-sm font-semibold text-ink mb-1">What are you working toward in the next 12 months?</label>
+          <textarea name="goals" rows={4} class="w-full rounded-xl border border-ink/15 px-4 py-3 font-sans"></textarea>
+        </div>
+        <div>
+          <label class="block text-sm font-semibold text-ink mb-1">How ready are you to invest time in mentorship? (1–10)</label>
+          <input type="number" name="readiness" min="1" max="10" class="w-full rounded-xl border border-ink/15 px-4 py-3 font-sans" />
+        </div>
+        <button type="submit" class="w-full rounded-full bg-gold py-3.5 text-sm font-bold text-ink hover:brightness-110 transition-all">
+          Submit application
+        </button>
+      </form>
+      <p class="mt-6 text-xs text-muted font-sans">Connect to Tally, Airtable, or your CRM (see PLAN.md).</p>
+    </div>
+  </section>
+</GlobalLayout>

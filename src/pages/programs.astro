@@ -1,0 +1,57 @@
+---
+import GlobalLayout from "../layouts/GlobalLayout.astro";
+import site from "../config.json";
+
+const programs = [
+  {
+    name: "Free Financial Education Session",
+    desc: "Clarity on where you stand and what to do next—no pressure, no jargon wall.",
+    cta: "Book Free Session",
+    href: "/book",
+  },
+  {
+    name: "Wealth & Leadership Mentorship",
+    desc: "Structured guidance to grow financially and personally, with accountability.",
+    cta: "Apply Now",
+    href: "/apply",
+  },
+  {
+    name: "One-on-One Advisory",
+    desc: "Personalized strategy aligned to your goals, timeline, and values.",
+    cta: "Schedule Consultation",
+    href: "/book",
+  },
+];
+---
+
+<GlobalLayout title="Programs" description="Free education, mentorship, and one-on-one advisory with Glorious Destiny Advisory.">
+  <section class="bg-ink text-ivory py-20 sm:py-24">
+    <div class="max-w-3xl mx-auto px-5 sm:px-8 text-center">
+      <h1 class="font-display text-4xl sm:text-5xl font-semibold">Programs</h1>
+      <p class="mt-6 text-ivory/75 font-sans text-lg leading-relaxed">
+        Start where you are. Each path is designed to meet you with clarity—not overwhelm.
+      </p>
+    </div>
+  </section>
+  <section class="py-16 sm:py-24 bg-sand/40">
+    <div class="max-w-5xl mx-auto px-5 sm:px-8 space-y-10">
+      {programs.map((p) => (
+        <article class="rounded-2xl border border-ink/8 bg-ivory p-8 sm:p-10 shadow-sm flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+          <div>
+            <h2 class="font-display text-2xl font-semibold text-ink">{p.name}</h2>
+            <p class="mt-3 font-sans text-muted leading-relaxed max-w-xl">{p.desc}</p>
+          </div>
+          <a
+            href={p.href}
+            class="shrink-0 inline-flex justify-center rounded-full bg-gold px-6 py-3 text-sm font-bold text-ink hover:brightness-110 transition-all"
+          >
+            {p.cta}
+          </a>
+        </article>
+      ))}
+    </div>
+  </section>
+  <p class="text-center pb-16 font-sans text-sm text-muted bg-sand/40">
+    {site.affiliation} · Educational context only.
+  </p>
+</GlobalLayout>

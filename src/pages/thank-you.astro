@@ -1,0 +1,24 @@
+---
+import GlobalLayout from "../layouts/GlobalLayout.astro";
+---
+
+<GlobalLayout title="Thank You" description="You're registered—next steps from Glorious Destiny Advisory.">
+  <section class="min-h-[60vh] flex items-center justify-center px-5 py-20 bg-ivory">
+    <div class="max-w-lg text-center">
+      <p class="text-gold font-sans text-sm font-bold uppercase tracking-widest">Thank you</p>
+      <h1 class="mt-4 font-display text-3xl sm:text-4xl font-semibold text-ink">You’re in.</h1>
+      <p class="mt-6 font-sans text-body/90 leading-relaxed">
+        Check your inbox for next steps. If you don’t see an email within a few minutes, check spam—or reach out via
+        Contact.
+      </p>
+      <div class="mt-10 flex flex-wrap justify-center gap-4">
+        <a href="/book" class="inline-flex rounded-full bg-gold px-6 py-3 text-sm font-bold text-ink hover:brightness-110 transition-all">
+          Book a consultation
+        </a>
+        <a href="/" class="inline-flex rounded-full border border-ink/15 px-6 py-3 text-sm font-semibold text-ink hover:bg-sand/60 transition-colors">
+          Back home
+        </a>
+      </div>
+    </div>
+  </section>
+</GlobalLayout>

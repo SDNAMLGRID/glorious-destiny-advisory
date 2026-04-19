@@ -1,0 +1,118 @@
+---
+import site from "../config.json";
+import "../styles/global.css";
+
+const { title, description } = Astro.props;
+const fullTitle = title.includes(site.brand) ? title : `${title} | ${site.brand}`;
+const path = Astro.url.pathname;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <a
+      href="#main"
+      class="fixed left-4 top-4 z-[100] -translate-y-20 rounded-lg bg-gold px-4 py-2 text-sm font-bold text-ink opacity-0 focus:translate-y-0 focus:opacity-100 transition-all"
+    >
+      Skip to main
+    </a>
+
+    <header class="sticky top-0 z-50 border-b border-white/10 bg-ink/95 backdrop-blur-md">
+      <div class="max-w-6xl mx-auto px-5 sm:px-8">
+        <div class="flex h-[4.25rem] items-center justify-between gap-4">
+          <a href="/" class="group shrink-0">
+            <p class="font-display text-lg sm:text-xl font-semibold text-ivory tracking-tight">
+              Glorious Destiny <span class="text-gold group-hover:text-gold/90 transition-colors">Advisory</span>
+            </p>
+            <p class="text-[0.65rem] uppercase tracking-[0.18em] text-ivory/55 font-sans hidden sm:block">
+              {site.principal}
+            </p>
+          </a>
+          <nav class="flex flex-wrap items-center justify-end gap-x-4 gap-y-2 text-[0.72rem] sm:text-sm font-sans font-semibold" aria-label="Main">
+            {[
+              ["/", "Home"],
+              ["/about", "About"],
+              ["/programs", "Programs"],
+              ["/free-training", "Free Training"],
+              ["/book", "Book"],
+              ["/contact", "Contact"],
+            ].map(([href, label]) => (
+              <a
+                href={href}
+                class:list={[
+                  "text-ivory/90 hover:text-ivory transition-colors",
+                  path === href && "text-gold",
+                ]}
+              >
+                {label}
+              </a>
+            ))}
+            <a
+              href="/book"
+              class="inline-flex items-center rounded-full bg-gold px-4 py-2 text-ink text-xs sm:text-sm font-bold hover:brightness-110 transition-all"
+            >
+              Start
+            </a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="flex-1">
+      <slot />
+    </main>
+
+    <footer class="bg-charcoal text-ivory/85 border-t border-gold/20">
+      <div class="max-w-6xl mx-auto px-5 sm:px-8 py-14">
+        <div class="grid md:grid-cols-2 gap-10 md:gap-16">
+          <div>
+            <p class="font-display text-xl text-ivory">{site.brand}</p>
+            <p class="text-gold/90 text-sm mt-1 font-sans">{site.affiliation}</p>
+            <p class="mt-4 text-sm text-ivory/70 font-sans leading-relaxed">
+              {site.tagline}
+            </p>
+          </div>
+          <div>
+            <p class="text-[0.65rem] uppercase tracking-[0.2em] text-gold/80 mb-3 font-sans">Legal</p>
+            <ul class="space-y-2 text-sm font-sans text-ivory/75">
+              <li><a href="/resources" class="hover:text-gold transition-colors">Financial Education</a></li>
+              <li><a href="/testimonials" class="hover:text-gold transition-colors">Success stories</a></li>
+              <li><a href="/legal" class="hover:text-gold transition-colors">Disclosures &amp; compliance</a></li>
+              <li><a href="/privacy" class="hover:text-gold transition-colors">Privacy Policy</a></li>
+              <li><a href="/terms" class="hover:text-gold transition-colors">Terms of Use</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="mt-12 pt-10 border-t border-ivory/10 text-xs text-ivory/55 font-sans leading-relaxed max-w-4xl space-y-3"
+          role="note"
+        >
+          <p>
+            <strong class="text-ivory/70">Independent entity.</strong> Glorious Destiny Advisory is an independent
+            entity. {site.principal} is a licensed financial professional with World Financial Group (WFG).
+          </p>
+          <p>
+            This website is for <strong class="text-ivory/70">educational purposes only</strong> and does not
+            constitute financial, legal, or tax advice. Results may vary. Consult a licensed professional for your
+            specific situation.
+          </p>
+          <p class="text-ivory/45">&copy; {new Date().getFullYear()} {site.brand}. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

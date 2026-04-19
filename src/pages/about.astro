@@ -1,0 +1,32 @@
+---
+import GlobalLayout from "../layouts/GlobalLayout.astro";
+import site from "../config.json";
+---
+
+<GlobalLayout title="About" description={`Mission, vision, and story of ${site.principal}—${site.brand}.`}>
+  <section class="bg-ink text-ivory py-20 sm:py-24">
+    <div class="max-w-3xl mx-auto px-5 sm:px-8">
+      <h1 class="font-display text-4xl sm:text-5xl font-semibold">About {site.principal}</h1>
+      <p class="mt-6 text-ivory/75 font-sans text-lg leading-relaxed">
+        {site.brand} exists to move people from uncertainty to clarity—and from survival to legacy—through education,
+        mentorship, and purpose-aligned strategy.
+      </p>
+    </div>
+  </section>
+  <section class="py-16 sm:py-20 bg-ivory">
+    <div class="max-w-3xl mx-auto px-5 sm:px-8 space-y-8 font-sans text-lg text-body/90 leading-relaxed">
+      <p>
+        This page is ready for your full story: where you started, what shaped your calling, and why you chose to serve
+        through World Financial Group (WFG) as a licensed financial professional.
+      </p>
+      <p class="text-sm text-muted">
+        Educational only—not a substitute for personalized advice. See <a href="/legal" class="text-gold-deep font-semibold hover:underline">Legal &amp; disclosures</a>.
+      </p>
+      <p>
+        <a href="/book" class="inline-flex rounded-full bg-gold px-6 py-3 text-sm font-bold text-ink hover:brightness-110 transition-all">
+          Book a conversation
+        </a>
+      </p>
+    </div>
+  </section>
+</GlobalLayout>
