@@ -41,8 +41,8 @@ Traffic (ads / social / WhatsApp / referrals)
 
 ## Phase 0 — Launch readiness (this week)
 
-1. **Replace placeholders** in `src/config.json`: real email, phone, `calendlyUrl` (or TidyCal / WFG-approved scheduler).
-2. **Portrait:** add `public/people/` image; swap homepage authority placeholder for `<Image>` or `<img>` with aspect ratio + subtle gold ring (match Infinite Wealth style).
+1. **Replace placeholders** in `src/config.json`: real email, phone, `calendlyUrl` (embed URL for `/book`, or TidyCal / WFG-approved scheduler).
+2. **Brand imagery:** mockups are served from `/images/gda/mockup_1.png` … `mockup_4.png`. The folder `glorious_destiny_mockups/` is gitignored (avoid duplicate large assets); keep originals locally if you need source files.
 3. **Wire forms**
    - **Free training:** Formspree, Basin, ConvertKit form action, or serverless API → redirect to `/thank-you`.
    - **Contact / Apply:** same pattern; store in Airtable/Notion if you want lightweight CRM.
