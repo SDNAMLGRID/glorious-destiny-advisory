@@ -1,6 +1,10 @@
 ---
 import GlobalLayout from "../layouts/GlobalLayout.astro";
 import site from "../config.json";
+
+const formEndpoint = site.formEndpoint?.trim();
+const formAction = formEndpoint || `mailto:${site.email}`;
+const formEncoding = formEndpoint ? "application/x-www-form-urlencoded" : "text/plain";
 ---
 
 <GlobalLayout title="Contact" description="Contact Glorious Destiny Advisory—questions, media, and partnership.">
@@ -31,7 +35,7 @@ import site from "../config.json";
         ) : null}
       </dl>
 
-      <form class="mt-12 space-y-4" method="get" action="/thank-you/">
+      <form class="mt-12 space-y-4" method="post" action={formAction} enctype={formEncoding}>
         <input type="hidden" name="source" value="contact" />
         <input type="text" name="name" placeholder="Name" class="w-full rounded-xl border border-ink/15 px-4 py-3 font-sans bg-white" />
         <input type="email" name="email" placeholder="Email" required class="w-full rounded-xl border border-ink/15 px-4 py-3 font-sans bg-white" />
@@ -41,8 +45,8 @@ import site from "../config.json";
         </button>
       </form>
       <p class="mt-6 text-xs text-muted font-sans leading-relaxed">
-        For production, connect this form to Formspree, Basin, or your own endpoint; keep the thank-you page as the
-        confirmation step.
+        Please avoid sending confidential account numbers, policy documents, or sensitive personal information through
+        this form.
       </p>
     </div>
   </section>

@@ -6,6 +6,10 @@ import GdaLogo from "../components/GdaLogo.astro";
 const { title, description } = Astro.props;
 const fullTitle = title.includes(site.brand) ? title : `${title} | ${site.brand}`;
 const path = Astro.url.pathname;
+const baseUrl = Astro.site ?? Astro.url.origin;
+const canonicalUrl = new URL(path, baseUrl).toString();
+const ogImageUrl = new URL("/og-image.png", baseUrl).toString();
+const twitterImageUrl = new URL("/twitter-image.png", baseUrl).toString();
 
 const links = [
   ["/", "Home"],
@@ -23,8 +27,30 @@ const links = [
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#C4A352" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#111111" />
+    <meta name="msapplication-TileColor" content="#C4A352" />
+    <meta name="msapplication-TileImage" content="/icons/mstile-150x150.png" />
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+    <meta property="og:site_name" content={site.brand} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={twitterImageUrl} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link

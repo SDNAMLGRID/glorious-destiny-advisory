@@ -5,27 +5,11 @@ interface Props {
 const { class: className = "h-11 w-11 shrink-0" } = Astro.props;
 ---
 
-<svg
+<img
   class={className}
-  viewBox="0 0 96 72"
-  fill="none"
-  xmlns="http://www.w3.org/2000/svg"
+  src="/images/gda/logo-mark-dark.png"
+  alt=""
   aria-hidden="true"
->
-  <defs>
-    <linearGradient id="gda-gold" x1="8" y1="4" x2="88" y2="64" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#F3E6C4"></stop>
-      <stop offset="0.45" stop-color="#C4A352"></stop>
-      <stop offset="1" stop-color="#7A6124"></stop>
-    </linearGradient>
-  </defs>
-  <text x="4" y="44" fill="url(#gda-gold)" font-family="Georgia, serif" font-size="38" font-weight="700">G</text>
-  <text x="44" y="44" fill="url(#gda-gold)" font-family="Georgia, serif" font-size="38" font-weight="700">D</text>
-  <path
-    d="M10 52C28 62 52 64 78 56C84 54 88 52 90 50"
-    stroke="url(#gda-gold)"
-    stroke-width="2.2"
-    stroke-linecap="round"
-    fill="none"></path>
-  <path d="M88 47l8 4-6 6-5-7z" fill="url(#gda-gold)"></path>
-</svg>
+  loading="eager"
+  decoding="async"
+/>

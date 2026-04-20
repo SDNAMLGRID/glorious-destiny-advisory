@@ -1,5 +1,10 @@
 ---
 import GlobalLayout from "../layouts/GlobalLayout.astro";
+import site from "../config.json";
+
+const formEndpoint = site.formEndpoint?.trim();
+const formAction = formEndpoint || `mailto:${site.email}`;
+const formEncoding = formEndpoint ? "application/x-www-form-urlencoded" : "text/plain";
 ---
 
 <GlobalLayout title="Apply for Mentorship" description="Apply for Wealth & Leadership Mentorship with Glorious Destiny Advisory.">
@@ -15,7 +20,7 @@ import GlobalLayout from "../layouts/GlobalLayout.astro";
 
   <section class="py-16 bg-ivory">
     <div class="max-w-xl mx-auto px-5 sm:px-8">
-      <form class="space-y-5" method="get" action="/thank-you/">
+      <form class="space-y-5" method="post" action={formAction} enctype={formEncoding}>
         <input type="hidden" name="source" value="mentorship-apply" />
         <div>
           <label class="block text-sm font-semibold text-ink mb-1">Name</label>
@@ -37,7 +42,10 @@ import GlobalLayout from "../layouts/GlobalLayout.astro";
           Submit application
         </button>
       </form>
-      <p class="mt-6 text-xs text-muted font-sans">Wire to Tally, Airtable, or your CRM for production workflows.</p>
+      <p class="mt-6 text-xs text-muted font-sans">
+        Applications are reviewed for fit, timing, and readiness. Please avoid sharing confidential financial documents
+        in this form.
+      </p>
     </div>
   </section>
 </GlobalLayout>

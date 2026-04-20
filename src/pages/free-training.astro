@@ -1,5 +1,10 @@
 ---
 import GlobalLayout from "../layouts/GlobalLayout.astro";
+import site from "../config.json";
+
+const formEndpoint = site.formEndpoint?.trim();
+const formAction = formEndpoint || `mailto:${site.email}`;
+const formEncoding = formEndpoint ? "application/x-www-form-urlencoded" : "text/plain";
 ---
 
 <GlobalLayout
@@ -10,7 +15,7 @@ import GlobalLayout from "../layouts/GlobalLayout.astro";
     <div class="absolute inset-0 bg-grain opacity-15 pointer-events-none" aria-hidden="true"></div>
     <div class="absolute inset-0 bg-dark-radial opacity-60 pointer-events-none" aria-hidden="true"></div>
     <div class="relative max-w-3xl mx-auto px-5 sm:px-8 text-center">
-      <p class="text-gold text-xs font-bold uppercase tracking-widest font-sans">Lead magnet</p>
+      <p class="text-gold text-xs font-bold uppercase tracking-widest font-sans">Free education</p>
       <h1 class="mt-4 font-display text-3xl sm:text-5xl font-semibold leading-tight">
         How to Build Wealth and Protect Your Income
       </h1>
@@ -21,10 +26,10 @@ import GlobalLayout from "../layouts/GlobalLayout.astro";
   <section class="py-16 sm:py-24 bg-ivory">
     <div class="max-w-xl mx-auto px-5 sm:px-8">
       <p class="font-sans text-body/90 leading-relaxed text-center">
-        Register to receive the training link and follow-up resources. Wire this form to your email platform or API;
-        until then, submitting sends guests to a thank-you page for a smooth demo funnel.
+        Register to receive the training link and follow-up resources from {site.brand}. You’ll learn simple,
+        education-first principles for building a stronger financial foundation.
       </p>
-      <form class="mt-10 space-y-4" method="get" action="/thank-you/">
+      <form class="mt-10 space-y-4" method="post" action={formAction} enctype={formEncoding}>
         <label class="block text-left text-sm font-semibold text-ink">
           Email
           <input
