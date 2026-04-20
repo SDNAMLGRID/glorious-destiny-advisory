@@ -151,6 +151,19 @@ const links = [
               </div>
             </div>
             <p class="mt-5 text-sm text-ivory/70 font-sans leading-relaxed max-w-md">{site.tagline}</p>
+            {site.linkedinUrl ? (
+              <p class="mt-4">
+                <a
+                  href={site.linkedinUrl}
+                  class="inline-flex items-center gap-2 text-sm font-semibold text-gold hover:text-gold-bright transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`${site.principal} on LinkedIn`}
+                >
+                  Connect on LinkedIn →
+                </a>
+              </p>
+            ) : null}
           </div>
           <div>
             <p class="text-[0.65rem] uppercase tracking-[0.2em] text-gold/80 mb-3 font-sans">Explore</p>
