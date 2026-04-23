@@ -4,26 +4,66 @@ import GlobalLayout from "../layouts/GlobalLayout.astro";
 const topics = [
   {
     title: "What “financial foundation” actually means",
-    desc: "Cash flow, protection, and habits—before optimization.",
+    desc: "Cash flow, protection, and habits—before optimization. The quiet work that makes everything else steadier.",
   },
   {
     title: "Income protection in plain language",
-    desc: "Why the paycheck is the engine—and what to watch for.",
+    desc: "Why the paycheck is the engine—and what to watch for when life speeds up or slows down.",
   },
   {
     title: "Legacy beyond a will",
-    desc: "Values, conversations, and structures that outlive a document.",
+    desc: "Values, conversations, and structures that outlive a document—so your intent is understood, not guessed.",
   },
+];
+
+const starters = [
+  "If my income paused for six months, what would break first—and what would I want protected?",
+  "What percentage of my plan is built on hope—and what percentage is built on structure?",
+  "What decision am I avoiding because I do not yet have plain-language answers?",
 ];
 ---
 
-<GlobalLayout title="Financial Education" description="Articles and resources from Glorious Destiny Advisory—education first.">
+<GlobalLayout title="Financial Education" description="Education-first articles and starters from Glorious Destiny Advisory—protection, stewardship, and legacy.">
   <section class="relative bg-ink text-ivory py-20 sm:py-24 overflow-hidden">
     <div class="absolute inset-0 bg-dark-radial opacity-60 pointer-events-none" aria-hidden="true"></div>
     <div class="relative max-w-3xl mx-auto px-5 sm:px-8">
-      <h1 class="font-display text-4xl sm:text-5xl font-semibold">Financial Education</h1>
+      <p class="text-xs font-bold uppercase tracking-[0.22em] text-gold font-sans mb-3">Education hub</p>
+      <h1 class="font-display text-4xl sm:text-5xl font-semibold">Resources for a clearer next step</h1>
       <p class="mt-6 text-ivory/75 font-sans text-lg leading-relaxed">
-        Short educational guides to help you think clearly about protection, stewardship, and long-term legacy.
+        This hub is growing—think of it as a quiet library, not a noise channel. Each guide is written to help you see
+        protection, growth, and legacy in plain language, then decide what deserves a conversation.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-0 bg-ivory border-t border-ink/5" aria-label="Collaborative learning environment">
+    <img
+      src="/images/gda/Collaborative%20corporate%20meeting%20in%20progress.png"
+      alt="Collaborative corporate meeting focused on financial strategy"
+      width="1600"
+      height="560"
+      class="w-full h-auto max-h-[280px] sm:max-h-[380px] object-cover object-[center_35%]"
+      loading="lazy"
+      decoding="async"
+    />
+  </section>
+
+  <section class="py-12 bg-charcoal border-y border-gold/15">
+    <div class="max-w-3xl mx-auto px-5 sm:px-8">
+      <h2 class="font-display text-xl font-semibold text-ivory">Clarity starters (ask yourself)</h2>
+      <p class="mt-2 text-sm text-ivory/60 font-sans">No right answers—just honest questions that surface what to explore next.</p>
+      <ul class="mt-6 space-y-3 font-sans text-ivory/80 text-sm leading-relaxed">
+        {starters.map((s) => (
+          <li class="flex gap-2">
+            <span class="text-gold shrink-0">◆</span>
+            <span>{s}</span>
+          </li>
+        ))}
+      </ul>
+      <p class="mt-8">
+        <a href="/book" class="text-sm font-bold text-gold hover:text-gold-bright underline underline-offset-4">
+          Talk through your answers on a call →
+        </a>
       </p>
     </div>
   </section>
@@ -38,8 +78,9 @@ const topics = [
         </article>
       ))}
     </div>
-    <p class="max-w-2xl mx-auto px-5 mt-12 text-center text-sm text-muted font-sans">
-      New resources are being prepared. For immediate guidance, book a free educational consultation.
+    <p class="max-w-2xl mx-auto px-5 mt-12 text-center text-sm text-muted font-sans leading-relaxed">
+      New guides are being prepared. For immediate guidance, book a complimentary educational conversation or register for
+      the <a href="/free-training" class="text-gold-deep font-semibold hover:underline">free training</a>.
     </p>
   </section>
 </GlobalLayout>

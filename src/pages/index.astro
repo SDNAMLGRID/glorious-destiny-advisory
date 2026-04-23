@@ -5,27 +5,27 @@ import GdaLogo from "../components/GdaLogo.astro";
 import site from "../config.json";
 
 const learnItems = [
-  "How to build a strong financial foundation",
-  "Strategies to grow and protect your wealth",
-  "Leadership principles for personal and professional growth",
-  "How to create a long-term legacy for your family",
-  "How to align your purpose with financial success",
+  "How cash flow, protection, and positioning work together before you chase “the next big thing”",
+  "Plain-language context for growing and defending wealth—so choices feel informed, not rushed",
+  "Leadership habits that turn good intentions into follow-through at home and at work",
+  "Legacy as stewardship: values, conversations, and structures that outlast any single account",
+  "How to align calling and calendar with a financial strategy you can explain in one sentence",
 ];
 ---
 
 <GlobalLayout
   title={site.brand}
-  description="Faith-driven financial education and mentorship—wealth, leadership, and legacy with Dr Gloria Ajayi."
+  description="Faith-forward financial education—clarity, protection, and legacy-minded strategy with Dr Gloria Ajayi. Book a complimentary educational conversation."
 >
-  <!-- 1. Hero — split layout aligned with mockup_4 (portrait + proposition) -->
+  <!-- 1. Hero — split layout, advisory office imagery -->
   <section class="relative min-h-[min(100dvh,900px)] flex flex-col lg:flex-row bg-ink text-ivory overflow-hidden">
     <div class="relative w-full lg:w-[46%] min-h-[300px] sm:min-h-[380px] lg:min-h-0 lg:max-w-none shrink-0">
       <img
-        src="/images/gda/mockup_4.png"
-        alt={`${site.principal}, licensed financial professional`}
+        src="/images/gda/Professional%20advisory%20meeting%20in%20a%20modern%20office.png"
+        alt="Professional advisory meeting in a modern office"
         width="1200"
         height="900"
-        class="absolute inset-0 h-full w-full object-cover object-[18%_center] lg:object-[22%_center]"
+        class="absolute inset-0 h-full w-full object-cover object-[30%_center] lg:object-[35%_center]"
         loading="eager"
         fetchpriority="high"
         decoding="async"
@@ -53,11 +53,11 @@ const learnItems = [
         <AdvisoryRule label="Wealth · Leadership · Legacy" class="justify-start mt-2 mb-8 max-w-md" />
 
         <h1 class="font-display text-[2rem] sm:text-4xl lg:text-[2.75rem] font-semibold leading-[1.1] tracking-tight">
-          Helping You Build Wealth, Leadership, and Legacy
+          Steward your income. Strengthen your leadership. Leave a legacy you’re proud to hand down.
         </h1>
         <p class="mt-8 text-base sm:text-lg text-ivory/78 font-sans leading-relaxed">
-          Faith-driven financial education and mentorship designed to help individuals and families take control of their
-          future, grow with confidence, and build lasting generational wealth.
+          Faith-forward education and mentorship—so your next step is grounded in understanding, not noise. {site.brand}
+          meets you where you are and helps you see protection, growth, and legacy in plain language.
         </p>
         <div class="mt-10 flex flex-wrap gap-4">
           <a
@@ -97,91 +97,147 @@ const learnItems = [
     </div>
   </section>
 
-  <!-- 2. Problem -->
-  <section class="py-20 sm:py-24 bg-ivory border-t border-ink/5" aria-labelledby="problem-heading">
-    <div class="max-w-3xl mx-auto px-5 sm:px-8 text-center">
-      <h2 id="problem-heading" class="font-display text-3xl sm:text-4xl font-semibold text-ink leading-tight">
-        Most People Are Working Hard… But Still Not Getting Ahead
+  <!-- 2. Why we exist (dual lens — inspired by clarity / protection framing) -->
+  <section class="py-20 sm:py-24 bg-ivory border-t border-ink/5" aria-labelledby="why-heading">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8">
+      <p class="text-center text-xs font-bold uppercase tracking-[0.22em] text-gold-deep font-sans mb-3">Why we exist</p>
+      <h2 id="why-heading" class="font-display text-3xl sm:text-4xl font-semibold text-ink text-center max-w-3xl mx-auto leading-tight">
+        Hope-forward clarity before complexity. Protection before guesswork.
       </h2>
-      <div class="mt-10 space-y-6 text-body/90 font-sans text-lg leading-relaxed text-left sm:text-center">
-        <p>You’re doing everything right—working, saving, trying to plan for the future.</p>
-        <p class="font-medium text-ink">But no one ever taught you:</p>
-        <ul class="text-left sm:inline-block sm:text-left space-y-2 mx-auto max-w-md">
-          <li class="flex gap-3 sm:gap-2">
-            <span class="text-gold shrink-0">◆</span>
-            <span>How money really works</span>
-          </li>
-          <li class="flex gap-3 sm:gap-2">
-            <span class="text-gold shrink-0">◆</span>
-            <span>How to build wealth beyond a paycheck</span>
-          </li>
-          <li class="flex gap-3 sm:gap-2">
-            <span class="text-gold shrink-0">◆</span>
-            <span>How to protect your income and your family</span>
-          </li>
-          <li class="flex gap-3 sm:gap-2">
-            <span class="text-gold shrink-0">◆</span>
-            <span>How to create a legacy that lasts beyond you</span>
-          </li>
-        </ul>
-        <p class="pt-4 text-ink font-medium">
-          So you stay stuck… not because you lack effort, but because you lack the right strategy.
-        </p>
+      <p class="mt-6 text-lg text-body/85 font-sans text-center max-w-2xl mx-auto leading-relaxed">
+        Most households are not short on effort—they are short on a calm place to learn how pieces fit together. {site.brand}
+        exists so you can understand the “why” behind strategy, then move at a pace that honors your faith, your family, and your season of life.
+      </p>
+      <div class="mt-14 grid md:grid-cols-2 gap-8 md:gap-10">
+        <div class="rounded-2xl border border-ink/10 bg-white p-8 shadow-card">
+          <h3 class="font-display text-xl font-semibold text-ink border-b border-gold/25 pb-3 mb-4">What quietly drains confidence</h3>
+          <ul class="space-y-3 font-sans text-body/85 leading-relaxed">
+            <li class="flex gap-2">
+              <span class="text-gold shrink-0">◆</span>
+              <span>Jargon-heavy advice that never connects to your actual cash flow and priorities</span>
+            </li>
+            <li class="flex gap-2">
+              <span class="text-gold shrink-0">◆</span>
+              <span>Old accounts and old assumptions still steering the ship after life has changed</span>
+            </li>
+            <li class="flex gap-2">
+              <span class="text-gold shrink-0">◆</span>
+              <span>Protection gaps on the one asset that funds everything else: your income</span>
+            </li>
+            <li class="flex gap-2">
+              <span class="text-gold shrink-0">◆</span>
+              <span>Confusing “busy with money” with a coordinated plan for flexibility and legacy</span>
+            </li>
+          </ul>
+        </div>
+        <div class="rounded-2xl border border-ink/10 bg-white p-8 shadow-card">
+          <h3 class="font-display text-xl font-semibold text-ink border-b border-gold/25 pb-3 mb-4">What we believe instead</h3>
+          <ul class="space-y-3 font-sans text-body/85 leading-relaxed">
+            <li class="flex gap-2">
+              <span class="text-gold shrink-0">◆</span>
+              <span>Education first: you deserve to know why something is suggested—not just that it exists</span>
+            </li>
+            <li class="flex gap-2">
+              <span class="text-gold shrink-0">◆</span>
+              <span>Leadership and stewardship belong in the same conversation as statements and spreadsheets</span>
+            </li>
+            <li class="flex gap-2">
+              <span class="text-gold shrink-0">◆</span>
+              <span>Peace of mind is a design problem: protection, positioning, and purpose working together</span>
+            </li>
+            <li class="flex gap-2">
+              <span class="text-gold shrink-0">◆</span>
+              <span>One faithful next step beats a stack of unfinished intentions</span>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- 3. The shift -->
+  <!-- 3. Get clarity first -->
+  <section class="py-14 sm:py-16 bg-charcoal border-y border-gold/15" aria-labelledby="clarity-strip-heading">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8">
+      <div class="rounded-2xl border border-gold/20 bg-ink/80 p-8 md:p-10 flex flex-col lg:flex-row items-center justify-between gap-8">
+        <div class="text-center lg:text-left">
+          <p class="text-xs font-bold uppercase tracking-[0.22em] text-gold font-sans mb-2">Start with clarity</p>
+          <h2 id="clarity-strip-heading" class="font-display text-2xl md:text-3xl font-semibold text-ivory leading-tight">
+            Learn first—then decide what deserves a deeper conversation
+          </h2>
+          <p class="mt-3 font-sans text-ivory/75 max-w-2xl leading-relaxed">
+            Browse the education hub, register for the free training, or book a complimentary conversation. Each path is
+            designed to reduce overwhelm and replace mystery with plain-language context.
+          </p>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-3 w-full lg:w-auto shrink-0">
+          <a
+            href="/resources"
+            class="inline-flex items-center justify-center rounded-full bg-gold-shine px-7 py-3.5 text-sm font-bold text-ink shadow-lift hover:brightness-110 transition-all w-full sm:w-auto text-center"
+          >
+            Open resources
+          </a>
+          <a
+            href="/free-training"
+            class="inline-flex items-center justify-center rounded-full border border-gold/35 px-7 py-3.5 text-sm font-semibold text-ivory hover:bg-ivory/5 transition-colors w-full sm:w-auto text-center"
+          >
+            Free training
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. The shift -->
   <section class="py-20 sm:py-24 bg-sand/70 border-t border-ink/5" aria-labelledby="shift-heading">
     <div class="max-w-3xl mx-auto px-5 sm:px-8">
       <h2 id="shift-heading" class="font-display text-3xl sm:text-4xl font-semibold text-ink text-center leading-tight">
-        There’s a Better Way Forward
+        A calmer way to move forward
       </h2>
       <div class="mt-10 space-y-6 font-sans text-lg text-body/90 leading-relaxed">
         <p class="text-xl font-medium text-ink text-center">
           That’s where {site.principal} comes in.
         </p>
         <p>
-          Through {site.brand}, she helps individuals and families:
+          Through {site.brand}, she walks alongside individuals and families to:
         </p>
         <ul class="space-y-3">
           <li class="flex gap-3">
             <span class="text-gold mt-1 shrink-0">◆</span>
-            <span>Understand how money works</span>
+            <span>Name the gap between where you are and where you want to be—without shame</span>
           </li>
           <li class="flex gap-3">
             <span class="text-gold mt-1 shrink-0">◆</span>
-            <span>Build structured financial strategies</span>
+            <span>Build structured, education-first strategies you can repeat and teach at home</span>
           </li>
           <li class="flex gap-3">
             <span class="text-gold mt-1 shrink-0">◆</span>
-            <span>Develop leadership and confidence</span>
+            <span>Grow leadership capacity alongside financial confidence</span>
           </li>
           <li class="flex gap-3">
             <span class="text-gold mt-1 shrink-0">◆</span>
-            <span>Align their purpose with real-world results</span>
+            <span>Anchor decisions in purpose so “success” still feels like you on your best day</span>
           </li>
         </ul>
         <p class="text-center font-medium text-ink pt-2">
-          This isn’t guesswork.<br />
-          <span class="text-body/80 font-normal">This is guided, proven, and built for long-term impact.</span>
+          This isn’t a script—it’s a relationship built for the long arc.<br />
+          <span class="text-body/80 font-normal">Guided, principled, and paced for real life.</span>
         </p>
       </div>
     </div>
   </section>
 
-  <!-- 4. Authority — mockup_1 brand portrait -->
+  <!-- 5. Authority — education-first context imagery -->
   <section class="py-20 sm:py-24 bg-ink text-ivory relative overflow-hidden" aria-labelledby="meet-heading">
     <div class="absolute inset-0 bg-grain opacity-[0.12] pointer-events-none" aria-hidden="true"></div>
     <div class="relative max-w-6xl mx-auto px-5 sm:px-8 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
       <div class="order-2 lg:order-1">
         <div class="rounded-2xl overflow-hidden border border-gold/25 shadow-goldring bg-charcoal max-w-md mx-auto lg:mx-0">
           <img
-            src="/images/gda/mockup_1.png"
-            alt={`${site.principal} — ${site.brand}`}
+            src="/images/gda/Focus%20on%20success%20and%20strategy.png"
+            alt="Focus on success and strategy in a professional setting"
             width="900"
             height="1200"
-            class="w-full h-auto object-cover object-top"
+            class="w-full h-auto object-cover object-[center_22%]"
             loading="lazy"
             decoding="async"
           />
@@ -196,9 +252,13 @@ const learnItems = [
           {site.principal} is a licensed financial professional with World Financial Group (WFG), dedicated to
           empowering individuals through financial education, leadership development, and purpose-driven guidance.
         </p>
+        <p class="mt-8 border-l-2 border-gold/60 pl-6 font-sans text-lg italic text-ivory/85 leading-relaxed">
+          {site.brand} is built on a simple premise: every household deserves a quiet place to learn—where questions are
+          welcome, language is plain, and faith and stewardship sit in the blueprint, not at the margins.
+        </p>
         <p class="mt-6 font-sans text-lg text-ivory/80 leading-relaxed">
           <span class="text-gold font-semibold">Her mission is simple:</span><br />
-          To help people move from uncertainty to clarity—and from survival to legacy.
+          Help people move from uncertainty to clarity—and from survival to legacy—with integrity and follow-through.
         </p>
         <p class="mt-10">
           <a href="/about" class="inline-flex font-sans text-sm font-bold text-gold hover:text-gold-bright underline underline-offset-4 transition-colors">
@@ -209,7 +269,7 @@ const learnItems = [
     </div>
   </section>
 
-  <!-- 5. What you'll learn -->
+  <!-- 6. What you'll learn -->
   <section class="py-20 sm:py-24 bg-ivory border-t border-ink/5" aria-labelledby="learn-heading">
     <div class="max-w-6xl mx-auto px-5 sm:px-8">
       <h2 id="learn-heading" class="font-display text-3xl sm:text-4xl font-semibold text-ink text-center max-w-3xl mx-auto leading-tight">
@@ -226,7 +286,7 @@ const learnItems = [
     </div>
   </section>
 
-  <!-- 6. Programs -->
+  <!-- 7. Programs -->
   <section class="py-20 sm:py-24 bg-sand/50 border-t border-ink/5" aria-labelledby="programs-heading">
     <div class="max-w-6xl mx-auto px-5 sm:px-8">
       <h2 id="programs-heading" class="font-display text-3xl sm:text-4xl font-semibold text-ink text-center leading-tight">
@@ -237,7 +297,7 @@ const learnItems = [
           <p class="text-gold text-xs font-bold uppercase tracking-widest font-sans">Entry</p>
           <h3 class="mt-3 font-display text-xl font-semibold text-ink">Free Financial Education Session</h3>
           <p class="mt-4 font-sans text-muted leading-relaxed flex-1">
-            Get clarity on your current financial position and next steps.
+            A no-pressure look at priorities, blind spots, and what “peace of mind” could look like in practical terms.
           </p>
           <a href="/book" class="mt-8 inline-flex font-sans text-sm font-bold text-gold-deep hover:text-ink underline underline-offset-4">
             Book Free Session →
@@ -247,7 +307,7 @@ const learnItems = [
           <p class="text-gold text-xs font-bold uppercase tracking-widest font-sans">Growth</p>
           <h3 class="mt-3 font-display text-xl font-semibold text-ink">Wealth &amp; Leadership Mentorship</h3>
           <p class="mt-4 font-sans text-muted leading-relaxed flex-1">
-            Structured guidance to help you grow financially and personally.
+            Rhythmic coaching for the season you’re in—wealth habits, leadership edges, and accountability that respects your calendar.
           </p>
           <a href="/apply" class="mt-8 inline-flex font-sans text-sm font-bold text-gold-deep hover:text-ink underline underline-offset-4">
             Apply Now →
@@ -257,7 +317,7 @@ const learnItems = [
           <p class="text-gold text-xs font-bold uppercase tracking-widest font-sans">Personal</p>
           <h3 class="mt-3 font-display text-xl font-semibold text-ink">One-on-One Advisory</h3>
           <p class="mt-4 font-sans text-muted leading-relaxed flex-1">
-            Personalized strategy tailored to your goals and situation.
+            Tailored education and strategy conversations aligned to your goals, values, and timeline—not a one-size-fits-all script.
           </p>
           <a href="/book" class="mt-8 inline-flex font-sans text-sm font-bold text-gold-deep hover:text-ink underline underline-offset-4">
             Schedule Consultation →
@@ -272,24 +332,34 @@ const learnItems = [
     </div>
   </section>
 
-  <!-- 7. Social proof -->
+  <!-- 8. Social proof -->
   <section class="py-20 sm:py-24 bg-ivory border-t border-ink/5" aria-labelledby="proof-heading">
     <div class="max-w-6xl mx-auto px-5 sm:px-8">
       <h2 id="proof-heading" class="font-display text-3xl sm:text-4xl font-semibold text-ink text-center leading-tight">
         Real People. Real Transformation.
       </h2>
       <p class="mt-4 text-center text-sm text-muted font-sans max-w-xl mx-auto">
-        Early voices from education sessions and mentorship—more stories as we grow.
+        Early reflections from education-first sessions—full names and longer stories are added with permission as they
+        become available.
       </p>
       <div class="mt-14 grid md:grid-cols-3 gap-8">
         {[
-          "I finally understand how to structure my finances.",
-          "This changed how I think about money completely.",
-          "I now have a clear path forward.",
-        ].map((quote) => (
+          {
+            q: "She explained things in human language—no pressure, no rush. For the first time I could see my whole picture on one page.",
+            f: "Education session participant",
+          },
+          {
+            q: "I came in overwhelmed and left with three priorities I could actually act on this month. That kind of clarity is rare.",
+            f: "Mentorship participant",
+          },
+          {
+            q: "Faith and finances finally feel like they belong in the same conversation. I wish I had found this sooner.",
+            f: "Advisory conversation attendee",
+          },
+        ].map(({ q, f }) => (
           <blockquote class="rounded-2xl border border-ink/10 bg-white p-8 shadow-card">
-            <p class="font-display text-lg text-ink/90 italic leading-relaxed">“{quote}”</p>
-            <footer class="mt-6 text-xs uppercase tracking-wider text-muted font-sans">Education participant</footer>
+            <p class="font-display text-lg text-ink/90 italic leading-relaxed">“{q}”</p>
+            <footer class="mt-6 text-xs uppercase tracking-wider text-muted font-sans">{f}</footer>
           </blockquote>
         ))}
       </div>
@@ -301,12 +371,11 @@ const learnItems = [
     </div>
   </section>
 
-  <!-- Secondary visual — mockup_3 (dark premium banner) -->
-  <section class="py-0 bg-ink" aria-hidden="true">
+  <!-- Secondary visual — professional office meeting -->
+  <section class="py-0 bg-ink" aria-label="Professional advisory context">
     <img
-      src="/images/gda/mockup_3.png"
-      alt=""
-      role="presentation"
+      src="/images/gda/Professional%20meeting%20in%20a%20modern%20office.png"
+      alt="Professional meeting in a modern office"
       width="1600"
       height="700"
       class="w-full h-auto max-h-[420px] sm:max-h-[520px] object-cover object-center opacity-95"
@@ -315,16 +384,52 @@ const learnItems = [
     />
   </section>
 
-  <!-- 8. Final CTA -->
+  <!-- 9. Conversation offer -->
+  <section class="py-16 sm:py-20 bg-sand/60 border-t border-ink/5" aria-labelledby="conversation-heading">
+    <div class="max-w-3xl mx-auto px-5 sm:px-8 text-center">
+      <p class="text-xs font-bold uppercase tracking-[0.22em] text-gold-deep font-sans mb-3">Ready when you are</p>
+      <h2 id="conversation-heading" class="font-display text-3xl sm:text-4xl font-semibold text-ink leading-tight">
+        Complimentary educational conversation
+      </h2>
+      <p class="mt-5 font-sans text-lg text-body/85 leading-relaxed">
+        A structured, calm conversation to understand where you are, what worries you most, and what a realistic next step
+        looks like—without a jargon wall.
+      </p>
+      <ul class="mt-8 text-left max-w-xl mx-auto space-y-3 font-sans text-body/85">
+        <li class="flex gap-2">
+          <span class="text-gold shrink-0">◆</span>
+          <span>A clearer picture of gaps that often hide in plain sight</span>
+        </li>
+        <li class="flex gap-2">
+          <span class="text-gold shrink-0">◆</span>
+          <span>Plain-language context so you can compare options with confidence</span>
+        </li>
+        <li class="flex gap-2">
+          <span class="text-gold shrink-0">◆</span>
+          <span>A recommended path forward when it’s a fit—including the courage to “not yet” when it isn’t</span>
+        </li>
+      </ul>
+      <div class="mt-10">
+        <a
+          href="/book"
+          class="inline-flex items-center justify-center rounded-full bg-gold-shine px-8 py-3.5 text-sm font-bold text-ink shadow-lift hover:brightness-110 transition-all"
+        >
+          Book your conversation
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. Final CTA -->
   <section class="relative py-20 sm:py-28 bg-ink text-ivory overflow-hidden border-t border-gold/15" aria-labelledby="close-heading">
     <div class="pointer-events-none absolute inset-0 bg-grain opacity-20" aria-hidden="true"></div>
     <div class="pointer-events-none absolute inset-0 bg-dark-radial opacity-80" aria-hidden="true"></div>
     <div class="relative max-w-3xl mx-auto px-5 sm:px-8 text-center">
       <h2 id="close-heading" class="font-display text-3xl sm:text-4xl font-semibold leading-tight">
-        Your Future Won’t Change… Until You Do
+        The next chapter starts with one brave, informed step
       </h2>
       <p class="mt-8 font-sans text-lg text-ivory/75 leading-relaxed">
-        The difference between where you are and where you want to be is the decision to take action.
+        The distance between today and the future you want is not perfection—it is consistent, well-lit action.
       </p>
       <p class="mt-4 font-sans text-lg text-ivory/75 leading-relaxed">You don’t have to figure it out alone.</p>
       <div class="mt-12 flex flex-wrap justify-center gap-4">

@@ -9,7 +9,7 @@ const formEncoding = formEndpoint ? "application/x-www-form-urlencoded" : "text/
 
 <GlobalLayout
   title="Free Training"
-  description="How to Build Wealth and Protect Your Income—free educational training with Glorious Destiny Advisory."
+  description="Free educational training—wealth habits, protection mindset, and calm next steps with Glorious Destiny Advisory."
 >
   <section class="relative bg-ink text-ivory py-20 sm:py-24 overflow-hidden">
     <div class="absolute inset-0 bg-grain opacity-15 pointer-events-none" aria-hidden="true"></div>
@@ -17,18 +17,34 @@ const formEncoding = formEndpoint ? "application/x-www-form-urlencoded" : "text/
     <div class="relative max-w-3xl mx-auto px-5 sm:px-8 text-center">
       <p class="text-gold text-xs font-bold uppercase tracking-widest font-sans">Free education</p>
       <h1 class="mt-4 font-display text-3xl sm:text-5xl font-semibold leading-tight">
-        How to Build Wealth and Protect Your Income
+        Build wealth habits and protect what you already have
       </h1>
-      <p class="mt-6 text-ivory/75 font-sans text-lg leading-relaxed">Free training · Educational only</p>
+      <p class="mt-6 text-ivory/75 font-sans text-lg leading-relaxed">
+        Free training · Educational only · No hype—just principles you can use this week
+      </p>
     </div>
   </section>
 
   <section class="py-16 sm:py-24 bg-ivory">
     <div class="max-w-xl mx-auto px-5 sm:px-8">
       <p class="font-sans text-body/90 leading-relaxed text-center">
-        Register to receive the training link and follow-up resources from {site.brand}. You’ll learn simple,
-        education-first principles for building a stronger financial foundation.
+        Register to receive the training link and follow-up resources from {site.brand}. The session is designed to help
+        you see your finances as a system—not a pile of unrelated accounts.
       </p>
+      <ul class="mt-10 max-w-md mx-auto space-y-3 font-sans text-sm text-body/85">
+        <li class="flex gap-2">
+          <span class="text-gold shrink-0">◆</span>
+          <span>How to think in layers: cash flow, protection, growth, legacy—without drowning in jargon</span>
+        </li>
+        <li class="flex gap-2">
+          <span class="text-gold shrink-0">◆</span>
+          <span>Common blind spots that quietly derail good intentions (and how to spot them early)</span>
+        </li>
+        <li class="flex gap-2">
+          <span class="text-gold shrink-0">◆</span>
+          <span>What a calm, education-first next step looks like if you want human guidance</span>
+        </li>
+      </ul>
       <form class="mt-10 space-y-4" method="post" action={formAction} enctype={formEncoding}>
         <label class="block text-left text-sm font-semibold text-ink">
           Email
