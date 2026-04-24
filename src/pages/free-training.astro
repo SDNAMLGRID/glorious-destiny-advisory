@@ -11,19 +11,42 @@ const formEncoding = formEndpoint ? "application/x-www-form-urlencoded" : "text/
   title="Free Training"
   description="Free educational training—wealth habits, protection mindset, and calm next steps with Glorious Destiny Advisory."
 >
-  <section class="relative bg-ink text-ivory py-20 sm:py-24 overflow-hidden">
-    <div class="absolute inset-0 bg-grain opacity-15 pointer-events-none" aria-hidden="true"></div>
-    <div class="absolute inset-0 bg-dark-radial opacity-60 pointer-events-none" aria-hidden="true"></div>
-    <div class="relative max-w-3xl mx-auto px-5 sm:px-8 text-center">
-      <p class="text-gold text-xs font-bold uppercase tracking-widest font-sans">Free education</p>
-      <h1 class="mt-4 font-display text-3xl sm:text-5xl font-semibold leading-tight">
-        Build wealth habits and protect what you already have
-      </h1>
-      <p class="mt-6 text-ivory/75 font-sans text-lg leading-relaxed">
-        Free training · Educational only · No hype—just principles you can use this week
-      </p>
+  <!-- Hero: full-bleed imagery + ink gradient (blended like Infinite Wealth Academy home hero) -->
+  <section
+    class="relative min-h-[min(82vh,920px)] overflow-hidden flex flex-col justify-center bg-ink text-ivory"
+    aria-label="Free training registration"
+  >
+    <div
+      class="absolute inset-0 z-0 bg-cover bg-no-repeat bg-[center_top] sm:bg-[center_22%] lg:bg-[right_center]"
+      style="background-image: url('/images/gda/Focus%20on%20success%20and%20strategy.png');"
+      role="img"
+      aria-hidden="true"
+    />
+    <div
+      class="absolute inset-0 z-[1] pointer-events-none"
+      style="background: linear-gradient(to right, #0A0A0C 0%, #0A0A0C 36%, rgba(10,10,12,0.96) 48%, rgba(10,10,12,0.82) 58%, rgba(10,10,12,0.45) 72%, rgba(10,10,12,0.12) 86%, transparent 96%);"
+      aria-hidden="true"
+    />
+    <div class="absolute inset-0 z-[1] bg-ink/55 md:bg-transparent pointer-events-none" aria-hidden="true"></div>
+    <div class="absolute inset-0 z-[1] bg-grain opacity-25 pointer-events-none mix-blend-overlay" aria-hidden="true"></div>
+    <div class="absolute inset-0 z-[1] bg-dark-radial opacity-50 pointer-events-none" aria-hidden="true"></div>
+
+    <div class="relative z-10 w-full max-w-6xl mx-auto px-5 sm:px-8 py-20 lg:py-28">
+      <div class="max-w-xl mx-auto text-center lg:mx-0 lg:text-left">
+        <p class="text-gold text-xs font-bold uppercase tracking-[0.2em] font-sans">Free education</p>
+        <h1 class="mt-4 font-display text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight tracking-tight">
+          Build wealth habits and protect what you already have
+        </h1>
+        <p class="mt-6 text-ivory/78 font-sans text-lg leading-relaxed">
+          Free training · Educational only · No hype—just principles you can use this week
+        </p>
+      </div>
     </div>
   </section>
+  <div
+    class="h-1.5 w-full bg-gradient-to-r from-gold via-gold/55 to-transparent opacity-90"
+    aria-hidden="true"
+  ></div>
 
   <section class="py-16 sm:py-24 bg-ivory">
     <div class="max-w-xl mx-auto px-5 sm:px-8">
